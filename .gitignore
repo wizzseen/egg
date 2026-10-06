@@ -1,0 +1,25 @@
+/target/
+**/*.rs.bk
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# DualStep / generated media
+*.hm
+*.hm.partial
+*.dstep*
+target/test-videos/
+*.yuv
+
+# Crash dumps and logs
+core
+core.*
+*.log

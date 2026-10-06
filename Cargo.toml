@@ -1,0 +1,32 @@
+[package]
+name = "egg"
+version = "0.1.0"
+edition = "2021"
+description = "Open-source media player with bidirectional frame stepping"
+license = "MIT"
+authors = ["egg contributors"]
+repository = "https://github.com/haseenmatharyousuffansari/egg"
+readme = "README.md"
+keywords = ["media-player", "gstreamer", "video", "frame-step"]
+categories = ["multimedia", "command-line-utilities"]
+
+[lib]
+name = "egg"
+path = "src/lib.rs"
+
+[[bin]]
+name = "egg"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+crossterm = "0.28"
+libloading = "0.8"
+gstreamer = { version = "0.25", features = ["v1_20"] }
+gstreamer-app = { version = "0.25", features = ["v1_20"] }
+gstreamer-audio = { version = "0.25", features = ["v1_20"] }
+gstreamer-pbutils = { version = "0.25", features = ["v1_20"] }
+gstreamer-video = { version = "0.25", features = ["v1_20"] }
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
